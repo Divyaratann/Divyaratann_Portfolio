@@ -14,7 +14,25 @@
 
     <!-- Google Search Snippet Thumbnail & Rich Media -->
     <meta name="thumbnail" content="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+    <meta name="image" content="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
     <link rel="image_src" href="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+
+    <!-- Google Search PageMap Data for Snippet Thumbnail Card -->
+    <!--
+    <PageMap>
+      <DataObject type="thumbnail">
+        <Attribute name="src" value="https://divyaratann-portfolio.netlify.app/profile-og.jpg"/>
+        <Attribute name="width" value="1200"/>
+        <Attribute name="height" value="1200"/>
+      </DataObject>
+      <DataObject type="cse_image">
+        <Attribute name="src" value="https://divyaratann-portfolio.netlify.app/profile-og.jpg"/>
+      </DataObject>
+      <DataObject type="document">
+        <Attribute name="author" value="Divyaratann Srivastava"/>
+      </DataObject>
+    </PageMap>
+    -->
 
     <!-- Open Graph / Facebook / WhatsApp (Rich Photo Previews) -->
     <meta property="og:type" content="website">
@@ -324,7 +342,7 @@
             max-height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center 15%;
+            object-position: center center;
             display: block;
             background: #0f111a;
             border: 3px solid #0f111a;
@@ -377,7 +395,7 @@
     </style>
 
     <!-- Main CSS with Cache Buster -->
-    <link rel="stylesheet" href="styles.css?v=20261027_roles">
+    <link rel="stylesheet" href="styles.css?v=20261027_snippet">
 
     <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets & Recruiter Search -->
     <script type="application/ld+json">
@@ -394,6 +412,8 @@
             "@id": "https://divyaratann-portfolio.netlify.app/#profile-image",
             "url": "https://divyaratann-portfolio.netlify.app/profile-og.jpg",
             "contentUrl": "https://divyaratann-portfolio.netlify.app/profile-og.jpg",
+            "width": 1200,
+            "height": 1200,
             "caption": "Divyaratann Srivastava - AI Engineer & Software QA Developer"
           },
           "jobTitle": "AI Engineer & Software Testing (QA) Developer",
@@ -424,9 +444,23 @@
           "publisher": {
             "@id": "https://divyaratann-portfolio.netlify.app/#person"
           },
+          "image": "https://divyaratann-portfolio.netlify.app/profile-og.jpg"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://divyaratann-portfolio.netlify.app/#webpage",
+          "url": "https://divyaratann-portfolio.netlify.app/",
+          "name": "Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer",
+          "isPartOf": {
+            "@id": "https://divyaratann-portfolio.netlify.app/#website"
+          },
+          "about": {
+            "@id": "https://divyaratann-portfolio.netlify.app/#person"
+          },
           "primaryImageOfPage": {
             "@id": "https://divyaratann-portfolio.netlify.app/#profile-image"
-          }
+          },
+          "image": "https://divyaratann-portfolio.netlify.app/profile-og.jpg"
         }
       ]
     }
@@ -551,14 +585,15 @@
 
                 <!-- Floating 3D Profile Card -->
                 <div class="hero-image-wrapper">
-                    <div class="profile-card tilt-card" id="profile-card">
+                    <div class="profile-card tilt-card" id="profile-card" itemscope itemtype="https://schema.org/Person">
+                        <meta itemprop="name" content="Divyaratann Srivastava">
                         <div class="profile-card-glow"></div>
                         <div class="profile-img-container">
-                            <img src="profile.jpg" alt="Divyaratann Srivastava Profile Photo" class="profile-pic" width="180" height="180" loading="eager">
+                            <img src="profile-og.jpg" alt="Divyaratann Srivastava" itemprop="image" class="profile-pic" width="180" height="180" loading="eager">
                             <div class="status-indicator" title="Active & Seeking Opportunities"></div>
                         </div>
                         <h3 class="profile-name">Divyaratann Srivastava</h3>
-                        <p class="profile-title">B.Tech Computer Science Engineering</p>
+                        <p class="profile-title" itemprop="jobTitle">B.Tech Computer Science Engineering</p>
                         <p class="profile-university"><i class="fas fa-university"></i> SHUATS, Prayagraj</p>
                         
                         <div class="profile-tags">

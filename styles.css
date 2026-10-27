@@ -759,7 +759,7 @@ section {
     max-height: 175px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center center;
     display: block;
     background: #0f111a;
     border: 3px solid #0f111a;
