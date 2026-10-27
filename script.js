@@ -180,11 +180,11 @@ function initTypingEffect() {
     if (!typingElement) return;
 
     const roles = [
-        'AI & LLM Systems Engineer',
-        'Software Tester & QA Automation Engineer',
-        'Full-Stack Developer (React & Python)',
-        'Agentic AI & RAG Developer',
-        'Machine Learning & Data Practitioner'
+        'AI & Machine Learning Engineer',
+        'Software QA & Automation Engineer',
+        'Full-Stack Software Developer',
+        'Generative AI & LLM Systems Engineer',
+        'SDET & Test Automation Specialist'
     ];
 
     let roleIndex = 0;
