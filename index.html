@@ -3,488 +3,1640 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divyaratann Srivastava - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Meta Tags -->
+    <title>Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer</title>
+    <meta name="title" content="Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer">
+    <meta name="description" content="Computer Science undergraduate specializing in AI engineering, Software Testing (QA), LLM APIs, Python, React, and Full Stack development.">
+    <meta name="keywords" content="Divyaratann Srivastava, AI Engineer, Software Tester, QA Engineer, Manual Testing, Automation Testing, AI Full Stack Developer, LLM & Generative AI, Python, React, Prayagraj, B.Tech CSE">
+    <meta name="author" content="Divyaratann Srivastava">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://divyaratann-portfolio.netlify.app/">
+    <meta property="og:title" content="Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer">
+    <meta property="og:description" content="Explore AI projects, Software Testing & QA, LLM applications, and Full Stack development work by Divyaratann Srivastava.">
+    <meta property="og:image" content="portfolio.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://divyaratann-portfolio.netlify.app/">
+    <meta property="twitter:title" content="Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer">
+    <meta property="twitter:description" content="Explore AI projects, Software Testing & QA, LLM applications, and Full Stack development work by Divyaratann Srivastava.">
+    <meta property="twitter:image" content="portfolio.png">
+
+    <!-- Favicon (Inline SVG Data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <!-- Anti-Cache Headers -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Critical Core Styles (Silicon Valley Royal Indigo & Titanium Violet Theme) -->
+    <style>
+        :root {
+            --bg-dark: #08090d;
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --secondary: #8b5cf6;
+            --accent: #a855f7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #08090d;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 55%),
+                radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 15% 60%, rgba(56, 189, 248, 0.05) 0%, transparent 45%);
+            color: #f8fafc;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 9, 13, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.18);
+            padding: 18px 0;
+        }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-icon { font-size: 1.4rem; color: #818cf8; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5)); }
+        .logo-text { font-size: 1.3rem; font-weight: 800; color: #f8fafc; letter-spacing: -0.3px; }
+        .logo-dot { color: #8b5cf6; }
+        .nav-menu { display: flex; align-items: center; gap: 22px; }
+        .nav-link {
+            text-decoration: none;
+            color: #94a3b8;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+        }
+        .nav-link:hover, .nav-link.active { color: #f8fafc; }
+        .nav-resume-btn {
+            padding: 8px 18px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(139, 92, 246, 0.18));
+            border: 1px solid rgba(99, 102, 241, 0.38);
+            color: #f8fafc;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+        }
+        .nav-resume-btn:hover {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 18px rgba(99, 102, 241, 0.5);
+            border-color: #818cf8;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 130px;
+            padding-bottom: 60px;
+        }
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 9999px;
+            color: #818cf8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .pulse-status {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse-ring 1.8s infinite;
+        }
+        .hero-title {
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1.2px;
+            color: #f8fafc;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #ffffff 20%, #c7d2fe 65%, #818cf8 90%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-role-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 7px 18px;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.28);
+            border-radius: 9999px;
+            margin-bottom: 24px;
+        }
+        .badge-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            padding: 3px 10px;
+            border-radius: 9999px;
+        }
+        .hero-role { font-size: 1.15rem; font-weight: 600; color: #f8fafc; }
+        .typing-text { color: #c7d2fe; }
+        .hero-description {
+            font-size: 1.08rem;
+            color: #94a3b8;
+            line-height: 1.75;
+            margin-bottom: 32px;
+            max-width: 620px;
+        }
+        .hero-buttons { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 28px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: #ffffff !important;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: #ffffff !important;
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: #f8fafc;
+            border: 1px solid rgba(99, 102, 241, 0.28);
+        }
+        .btn-secondary:hover {
+            background: rgba(99, 102, 241, 0.12);
+            border-color: #818cf8;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        .hero-checks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .check-item {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .check-item i { color: #818cf8; }
+        .hero-socials { display: flex; gap: 14px; }
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(15, 17, 26, 0.85);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.25s ease;
+        }
+        .social-icon:hover {
+            color: #ffffff;
+            background: #6366f1;
+            border-color: #818cf8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.45);
+        }
+        .hero-image-wrapper { display: flex; justify-content: center; }
+        .profile-card {
+            background: linear-gradient(180deg, rgba(17, 20, 31, 0.9) 0%, rgba(11, 13, 20, 0.95) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.28);
+            border-radius: 26px;
+            padding: 36px 26px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 360px;
+            transition: all 0.25s ease;
+        }
+        .profile-card-glow {
+            position: absolute;
+            top: -20px; left: -20px; right: -20px; bottom: -20px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, transparent 70%);
+            border-radius: 36px;
+            z-index: -1;
+            opacity: 0.6;
+            filter: blur(30px);
+            pointer-events: none;
+        }
+        .profile-img-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 22px;
+            padding: 3px;
+            background: linear-gradient(135deg, #c7d2fe, #818cf8, #6366f1, #8b5cf6);
+            border-radius: 50%;
+            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.35);
+            overflow: visible;
+        }
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            max-width: 180px;
+            max-height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 15%;
+            display: block;
+            background: #0f111a;
+            border: 3px solid #0f111a;
+        }
+        .status-indicator {
+            position: absolute;
+            bottom: 8px;
+            right: 12px;
+            width: 18px;
+            height: 18px;
+            background: #10b981;
+            border: 3px solid #0f111a;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.7);
+        }
+        .profile-name { font-size: 1.35rem; font-weight: 800; color: #f8fafc; margin-bottom: 4px; }
+        .profile-title { font-size: 0.88rem; color: #818cf8; font-weight: 600; margin-bottom: 6px; }
+        .profile-university { font-size: 0.8rem; color: #94a3b8; margin-bottom: 18px; }
+        .profile-tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .profile-tag {
+            padding: 5px 12px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            color: #c7d2fe;
+            font-weight: 600;
+        }
+        .stats-counter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: rgba(15, 17, 26, 0.85);
+            border: 1px solid rgba(99, 102, 241, 0.18);
+            padding: 28px 24px;
+            border-radius: 20px;
+            backdrop-filter: blur(14px);
+        }
+        @media (max-width: 992px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-role-badge, .hero-buttons, .hero-checks, .hero-socials { justify-content: center; }
+            .hero-description { margin-left: auto; margin-right: auto; }
+            .stats-counter-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2.2rem; }
+            .stats-counter-grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; }
+        }
+    </style>
+
+    <!-- Main CSS with Cache Buster -->
+    <link rel="stylesheet" href="styles.css?v=20261026_sv">
+
+    <!-- Schema.org JSON-LD Structured Data for Recruiter Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Divyaratann Srivastava",
+      "url": "https://divyaratann-portfolio.netlify.app",
+      "image": "profile.jpg",
+      "jobTitle": "AI Engineer | Software Tester / QA | AI Full Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sam Higginbottom University of Agriculture, Technology and Sciences (SHUATS)"
+      },
+      "sameAs": [
+        "https://github.com/Divyaratann",
+        "https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/",
+        "https://leetcode.com/u/Divyaratann/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Prayagraj",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "India"
+      },
+      "alumniOf": "RPM Academy",
+      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Testing", "Quality Assurance", "Manual Testing", "Automation Testing", "Generative AI", "LLM APIs", "Python", "JavaScript", "React", "Full Stack Development"]
+    }
+    </script>
+
+    <!-- EmailJS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <!-- Page Loading Screen -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading Divyaratann.ai</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Interactive Glowing Cursor Follower -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Canvas Background for Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Clean Modern Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Divyaratann Srivastava</h2>
-            </div>
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-brain"></i></span>
+                <span class="logo-text">Divyaratann<span class="logo-dot">.ai</span></span>
+            </a>
+            
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#achievements" class="nav-link">Achievements</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class="nav-link"><i class="fas fa-user-astronaut"></i> About</a>
+                <a href="#ai-capabilities" class="nav-link"><i class="fas fa-bolt"></i> Capabilities</a>
+                <a href="#skills" class="nav-link"><i class="fas fa-microchip"></i> Skills & QA</a>
+                <a href="#projects" class="nav-link"><i class="fas fa-code-branch"></i> Projects</a>
+                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+                <a href="#achievements" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+
+            <div class="nav-actions">
+                <a href="RESUMEDivyaratann.pdf" target="_blank" download="Divyaratann_Srivastava_Resume.pdf" class="nav-resume-btn">
+                    <i class="fas fa-download"></i> Resume
+                </a>
+                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Divyaratann Srivastava</span></h1>
-                <p class="hero-subtitle">Computer Science Engineering Student</p>
-                <p class="hero-description">
-                    Passionate about software development, AI, and creating innovative solutions. 
-                    I love exploring new technologies and building projects that make a difference.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Divyaratann" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:divyratan2703@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-img">
-                    <!--    <i class="fas fa-user"></i>  -->
-                        <img src="profile-img.jpg" alt="Divyaratann" class="profile-pic">
+    <!-- Main Content Area -->
+    <main>
+        <!-- Home Section / Hero -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-status"></span> Available for AI/ML, Full-Stack & Software Testing (QA) Roles
                     </div>
-                    <h3>Divyaratann Srivastava</h3>
-                    <p>Computer Science Student</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Divyaratann Srivastava</span>
+                    </h1>
+                    
+                    <div class="hero-role-badge">
+                        <span class="badge-label"><i class="fas fa-sparkles"></i> DOMAIN</span>
+                        <span class="badge-divider"></span>
+                        <div class="hero-role" aria-live="polite">
+                            <span class="typing-text" id="typing-text"></span><span class="cursor" aria-hidden="true">&nbsp;</span>
+                        </div>
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a passionate Computer Science Engineering student with a strong interest in 
-                        software development, artificial intelligence, and machine learning. I enjoy 
-                        solving complex problems and creating innovative solutions using modern technologies.
+                    <p class="hero-description">
+                        Computer Science engineer specializing in AI/ML systems, Full-Stack applications, and Software Quality Assurance (QA). Building high-performance, bug-free intelligent systems with modern Python, React, automated testing, and LLM pipelines.
                     </p>
-                    <p>
-                        My journey in technology started with curiosity about how things work, and now 
-                        I'm dedicated to building applications that can make a positive impact on society. 
-                        I believe in continuous learning and staying updated with the latest trends in technology.
-                    </p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 9792085957</span>
-                        </div>
-                        <div class="contact-item">
+
+                    <!-- Hero Call to Action Buttons -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary btn-glow">
+                            <i class="fas fa-rocket"></i> View Projects
+                        </a>
+                        <a href="RESUMEDivyaratann.pdf" target="_blank" download="Divyaratann_Srivastava_Resume.pdf" class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <!-- Bullet Check Badges -->
+                    <div class="hero-checks">
+                        <span class="check-item"><i class="fas fa-check"></i> Generative AI & LLMs</span>
+                        <span class="check-item"><i class="fas fa-check"></i> QA & Automated Testing</span>
+                        <span class="check-item"><i class="fas fa-check"></i> Full Stack Web & APIs</span>
+                        <span class="check-item"><i class="fas fa-check"></i> Available for Tech Roles</span>
+                    </div>
+
+                    <!-- Social Icons Bar -->
+                    <div class="hero-socials">
+                        <a href="https://github.com/Divyaratann" target="_blank" class="social-icon" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/" target="_blank" class="social-icon" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/Divyaratann/" target="_blank" class="social-icon" title="LeetCode Profile">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="mailto:divyaratann2703@gmail.com" class="social-icon" title="Email Direct">
                             <i class="fas fa-envelope"></i>
-                            <span>divyratan2703@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">C</span>
-                        <span class="skill-item">SQL</span>
-                        <!--<span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML/CSS</span>     -->
-                    </div>
-                </div>
-                <div class="skill-category">
-               <!--     <h3><i class="fas fa-tools"></i> Frameworks & Libraries</h3> -->
-                    <h3><i class="fas fa-tools"></i> Frontend Development:</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">HTML5</span>
-                        <span class="skill-item">CSS3</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">React (Basic)</span>
-                        <span class="skill-item">Responsive Web Design</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                <!--    <h3><i class="fas fa-database"></i> Databases</h3> -->
-                   <h3><i class="fas fa-database"></i> AI / Machine Learning:</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Machine Learning Fundamentals</span>
-                        <span class="skill-item">Data Preprocessing</span>
-                        <span class="skill-item">Model Training & Evaluation</span>
-                        <span class="skill-item">NumPy</span>
-                        <span class="skill-item">Pandas</span>
-                        <span class="skill-item">Scikit-learn (Basic)</span>
-                        <span class="skill-item">Data Handling</span>
-                    </div>
-                </div>   
-                <div class="skill-category">
-                    <h3><i class="fas fa-wrench"></i> Databases:</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">MySQL (Basic CRUD Operations)</span>
-                        <span class="skill-item">MongoDB (Basic)</span>
-                    </div>                
-                    </div>                
-                <div class="skill-category">
-                    <h3><i class="fas fa-wrench"></i> Tools & Technologies</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">VS Code</span>
-                        <span class="skill-item">Jupyter Notebook</span>
-                       <!-- <span class="skill-item">AWS</span>   -->
-                    </div>
-                   </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Advanced Calculator</h3>
-                        <p>A feature-rich calculator application built with Python, supporting basic arithmetic operations, scientific calculations, and a modern CLI interface.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">CLI Application</span>
-                            <span class="tech-tag">Math Module</span>
-                            <span class="tech-tag">Loop & Conditions</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyaratann/Advanced-Calculator/tree/main" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                    <img src="portfolio.png" alt="Portfolio Website">
-
-                     <!--  <i class="fas fa-globe"></i>         -->
-                    </div>
-                    <div class="project-content">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>A responsive and modern portfolio website showcasing my projects and skills, built with HTML, CSS, and JavaScript.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://Divyaratann-Portfolio.netlify.app" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Divyaratann/Divyaratann_Portfolio" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="amazon.png" alt="Amazon Clone">
-                    <!--- <i class="fas fa-shopping-cart"></i>          -->
-                    </div>
-                    <div class="project-content">
-                        <h3>Amazon Clone</h3>
-                        <p>A responsive e-commerce website clone inspired by Amazon, featuring product listings, shopping cart functionality, and user authentication.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                          <!---  <span class="tech-tag">JavaScript</span>     -->
-                        </div>
-                        <div class="project-links">
-                            <a href="https://amazon-clone-div-341f34.netlify.app/" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Divyaratann/Amazon_Clone" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Chatbot</h3>
-                        <p>An intelligent chatbot application using natural language processing and machine learning to provide automated customer support.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">NLP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Divyaratann" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                    <img src="MLpatient.png" alt="Patient Performance Prediction">
-
-                    <!--    <i class="fas fa-mobile-alt"></i>        -->
-                    </div>
-                    <div class="project-content">
-                        <h3>Patient Performance Prediction</h3>
-                        <p>A Machine Learning-inspired predictive system that analyzes patient health metrics and estimates risk level</p>
-                        <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript (ES6)</span>
-                             <span class="tech-tag">Machine Learning (Rule-Based Model)</span>                   
-                           <span class="tech-tag">Chart.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://patient-performance-prediction-ml.netlify.app/" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/Divyaratann/Patient-Performance-Prediction_ML" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements & Certifications</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Generative AI Certification – Google</h3>
-                    <p>Certified in Generative AI concepts including LLMs and AI applications</p>
-                    <span class="achievement-date">2024</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development Workshop – IIT Bombay</h3>
-                    <p>Participated in Techfest workshop focusing on frontend technologies and responsive web design</p>
-                    <span class="achievement-date">2024</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Research Methodology & Data Analysis</h3>
-                    <p>National workshop on Research Methodology and Data Analysis using SPSS and Sigma Plot.</p>
-                    <span class="achievement-date">2023</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Machine Learning Intern – Future Interns</h3>
-                    <p>Completed ML internship with hands-on experience in model building and evaluation.</p>
-                    <span class="achievement-date">2025</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Machine Learning</h3>
-                    <p>Completed Coursera Machine Learning course by Stanford University</p>
-                    <span class="achievement-date">2025</span>
-                </div>
-
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Continuous Learning in AI Engineering</h3>
-                    <p>Actively improving skills in AI Engineering, Machine Learning and Frontend Development during B.Tech.</p>
-                    <span class="achievement-date">2023 -Present</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Bachelor of Technology - Computer Science Engineering</h3>
-                        <p class="institution">Sam Higginbottom University of Agriculture, Technology and Sciences</p>
-                        <p class="duration">2023 - 2027</p>
-                        <p class="description">Pursuing B.Tech in Computer Science with focus on software development, AI, and machine learning.</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Higher Secondary Education (12th)</h3>
-                        <p class="institution">CBSE Board</p>
-                        <p class="duration">2020 - 2022</p>
-                        <p class="description">Completed 12th grade with Physics, Chemistry, Mathematics, and Computer Science.</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Secondary Education (10th)</h3>
-                        <p class="institution">CBSE Board</p>
-                        <p class="duration">2018 - 2020</p>
-                        <p class="description">Completed 10th grade with excellent academic performance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>divyratan2703@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 9792085957</p>
-                            </div>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>India</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-download">
-                        <a href="Divyaratann_Srivastava_Resume.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-download"></i> View Resume
                         </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <!-- Floating 3D Profile Card -->
+                <div class="hero-image-wrapper">
+                    <div class="profile-card tilt-card" id="profile-card">
+                        <div class="profile-card-glow"></div>
+                        <div class="profile-img-container">
+                            <img src="profile.jpg" alt="Divyaratann Srivastava Profile Photo" class="profile-pic" width="180" height="180" loading="eager">
+                            <div class="status-indicator" title="Active & Seeking Opportunities"></div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <h3 class="profile-name">Divyaratann Srivastava</h3>
+                        <p class="profile-title">B.Tech Computer Science Engineering</p>
+                        <p class="profile-university"><i class="fas fa-university"></i> SHUATS, Prayagraj</p>
+                        
+                        <div class="profile-tags">
+                            <span class="profile-tag">AI / ML</span>
+                            <span class="profile-tag">Full Stack</span>
+                            <span class="profile-tag">QA / Testing</span>
+                            <span class="profile-tag">Python</span>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Stats Counter Bar -->
+            <div class="container">
+                <div class="stats-counter-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-plus">+</div>
+                        <div class="stat-label">AI & Web Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-plus">+</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="stat-number" data-target="200">0</div>
+                        <div class="stat-plus">+</div>
+                        <div class="stat-label">LeetCode DSA Solved</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-vial-circle-check"></i></div>
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-plus">%</div>
+                        <div class="stat-label">QA Test Pass Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get to know me</span>
+                    <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <h3 class="about-heading">
+                            Passionate AI Engineer, Full Stack Developer & QA Tester
+                        </h3>
+                        
+                        <p class="about-paragraph">
+                            Computer Science undergraduate specializing in AI-powered web applications and Software Quality Assurance. Experienced in developing full-stack applications using Python, React, and REST APIs, paired with strong knowledge of manual & automated software testing, API testing, test case design, and defect lifecycle management. Dedicated to delivering reliable, bug-free, high-performance software.
+                        </p>
+
+                        <div class="about-highlights-grid">
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="highlight-info">
+                                    <h4>Current B.Tech Student</h4>
+                                    <p>CS Engineering at SHUATS, Prayagraj (2023 - 2027)</p>
+                                </div>
+                            </div>
+
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon"><i class="fas fa-robot"></i></div>
+                                <div class="highlight-info">
+                                    <h4>Artificial Intelligence</h4>
+                                    <p>Prompt Eng, LLMs, GenAI APIs & Vector DBs</p>
+                                </div>
+                            </div>
+
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon"><i class="fas fa-vial-circle-check"></i></div>
+                                <div class="highlight-info">
+                                    <h4>Software Testing & QA</h4>
+                                    <p>Manual & Automation, API Testing, Bug Tracking & Test Cases</p>
+                                </div>
+                            </div>
+
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="highlight-info">
+                                    <h4>Full Stack Development</h4>
+                                    <p>React, JavaScript ES6+, Node.js & REST API Integration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="career-objective-box">
+                            <h4><i class="fas fa-bullseye"></i> Career Objective</h4>
+                            <p>To leverage my technical capabilities in Artificial Intelligence, Software Testing & QA, and Full Stack Web Development to build and verify scalable, high-impact software solutions while continuously growing in a fast-paced technology team.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-info-sidebar">
+                        <div class="quick-details-card">
+                            <h3><i class="fas fa-id-card"></i> Quick Info</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <span class="info-label"><i class="fas fa-user"></i> Name:</span>
+                                    <span class="info-value">Divyaratann Srivastava</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                                    <span class="info-value">Prayagraj, Uttar Pradesh, India</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
+                                    <span class="info-value"><a href="mailto:divyaratann2703@gmail.com">divyaratann2703@gmail.com</a></span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-phone"></i> Phone:</span>
+                                    <span class="info-value"><a href="tel:+919792085957">+91 9792085957</a></span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-briefcase"></i> Availability:</span>
+                                    <span class="info-value text-accent">Open to AI/ML & QA Roles</span>
+                                </li>
+                            </ul>
+
+                            <div class="about-action-btn">
+                                <a href="#contact" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane"></i> Contact Me Directly
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Capabilities & Superpowers Section -->
+        <section id="ai-capabilities" class="ai-capabilities">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">End-to-End AI Engineering & Superpowers</span>
+                    <h2 class="section-title">What I Can Build & Automate <span class="highlight">Using AI</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="ai-capabilities-banner">
+                    <div class="ai-banner-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="ai-banner-text">
+                        <h3>10x AI Development Velocity & Problem-Solving</h3>
+                        <p>I leverage AI models, LLM APIs, custom RAG pipelines, and agentic workflows to conceptualize, engineer, and deploy full-stack applications to solve any complex software challenge.</p>
+                    </div>
+                </div>
+
+                <div class="ai-cards-grid">
+                    <!-- Card 1 -->
+                    <div class="ai-card tilt-card">
+                        <div class="ai-card-icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="ai-card-title">Autonomous AI Agents & Workflows</h3>
+                        <p class="ai-card-desc">Designing multi-step autonomous AI agents with tool usage, web browsing capabilities, and custom function calling to automate complex multi-stage tasks.</p>
+                        <div class="ai-card-tags">
+                            <span>LangChain</span>
+                            <span>Agentic Logic</span>
+                            <span>Tool Use</span>
+                            <span>Task Automation</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="ai-card tilt-card">
+                        <div class="ai-card-icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="ai-card-title">Custom RAG & Semantic Retrieval</h3>
+                        <p class="ai-card-desc">Architecting Retrieval-Augmented Generation (RAG) pipelines over documents, PDFs, and enterprise databases with vector search and cited accuracy.</p>
+                        <div class="ai-card-tags">
+                            <span>Vector DBs</span>
+                            <span>Embeddings</span>
+                            <span>Document QA</span>
+                            <span>Context Retrieval</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="ai-card tilt-card">
+                        <div class="ai-card-icon"><i class="fas fa-sparkles"></i></div>
+                        <h3 class="ai-card-title">LLM API & Multi-Model Integration</h3>
+                        <p class="ai-card-desc">Seamlessly connecting OpenAI (GPT-4o), Gemini 1.5/2.0 APIs, Claude, and open-source models (Llama 3, Mistral) into production web apps.</p>
+                        <div class="ai-card-tags">
+                            <span>OpenAI API</span>
+                            <span>Gemini API</span>
+                            <span>LLM APIs</span>
+                            <span>JSON Parsing</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="ai-card tilt-card">
+                        <div class="ai-card-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3 class="ai-card-title">AI-Powered Full-Stack Web Apps</h3>
+                        <p class="ai-card-desc">Building responsive React frontends integrated with Python (Flask/FastAPI/Streamlit) backends powered by intelligent machine learning models.</p>
+                        <div class="ai-card-tags">
+                            <span>React</span>
+                            <span>Python</span>
+                            <span>REST API</span>
+                            <span>Full Stack AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="ai-card tilt-card">
+                        <div class="ai-card-icon"><i class="fas fa-eye"></i></div>
+                        <h3 class="ai-card-title">Multimodal AI & Computer Vision</h3>
+                        <p class="ai-card-desc">Implementing multimodal AI features including visual image processing, document text extraction (OCR), speech recognition, and OpenCV analytics.</p>
+                        <div class="ai-card-tags">
+                            <span>OpenCV</span>
+                            <span>OCR</span>
+                            <span>Image Processing</span>
+                            <span>Multimodal AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="ai-card tilt-card">
+                        <div class="ai-card-icon"><i class="fas fa-terminal"></i></div>
+                        <h3 class="ai-card-title">Prompt Engineering & AI Guardrails</h3>
+                        <p class="ai-card-desc">Crafting high-precision system prompts, zero-shot/few-shot prompts, fallback handlers, and schema validation to guarantee AI reliability.</p>
+                        <div class="ai-card-tags">
+                            <span>Prompt Eng</span>
+                            <span>Structured Outputs</span>
+                            <span>AI Guardrails</span>
+                            <span>System Prompts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Technical Proficiency</span>
+                    <h2 class="section-title">Skills & <span class="highlight">Tech Stack</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-categories-grid">
+                    <!-- Category 1: Programming Languages -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-code"></i></div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fab fa-python skill-icon python"></i> Python</div>
+                            <div class="skill-pill"><i class="fab fa-java skill-icon java"></i> Java</div>
+                            <div class="skill-pill"><i class="fab fa-js skill-icon js"></i> JavaScript (ES6+)</div>
+                            <div class="skill-pill"><i class="fas fa-c skill-icon c"></i> C</div>
+                            <div class="skill-pill"><i class="fas fa-database skill-icon sql"></i> SQL</div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Artificial Intelligence & Data Science -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-brain"></i></div>
+                            <h3>Artificial Intelligence & ML</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fas fa-sparkles"></i> OpenAI API</div>
+                            <div class="skill-pill"><i class="fas fa-microchip"></i> Gemini API</div>
+                            <div class="skill-pill"><i class="fas fa-terminal"></i> Prompt Engineering</div>
+                            <div class="skill-pill"><i class="fas fa-robot"></i> Machine Learning</div>
+                            <div class="skill-pill"><i class="fas fa-cogs"></i> Scikit-Learn</div>
+                            <div class="skill-pill"><i class="fas fa-network-wired"></i> LLM APIs</div>
+                            <div class="skill-pill"><i class="fas fa-table"></i> Pandas</div>
+                            <div class="skill-pill"><i class="fas fa-square-root-variable"></i> NumPy</div>
+                            <div class="skill-pill"><i class="fas fa-chart-pie"></i> Matplotlib</div>
+                            <div class="skill-pill"><i class="fas fa-filter"></i> Data Preprocessing</div>
+                            <div class="skill-pill"><i class="fas fa-chart-line"></i> Model Evaluation</div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Frontend -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fab fa-html5 skill-icon html"></i> HTML5</div>
+                            <div class="skill-pill"><i class="fab fa-css3-alt skill-icon css"></i> CSS3</div>
+                            <div class="skill-pill"><i class="fab fa-js skill-icon js"></i> JavaScript</div>
+                            <div class="skill-pill"><i class="fab fa-react skill-icon react"></i> React</div>
+                            <div class="skill-pill"><i class="fas fa-mobile-screen"></i> Responsive Web Design</div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Backend -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-server"></i></div>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fab fa-node-js skill-icon node"></i> Node.js</div>
+                            <div class="skill-pill"><i class="fas fa-cubes"></i> Express.js</div>
+                            <div class="skill-pill"><i class="fas fa-network-wired"></i> REST API</div>
+                        </div>
+                    </div>
+
+                    <!-- Category 5: Database -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-database"></i></div>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fas fa-leaf skill-icon mongo"></i> MongoDB</div>
+                            <div class="skill-pill"><i class="fas fa-database skill-icon mysql"></i> MySQL</div>
+                            <div class="skill-pill"><i class="fas fa-fire skill-icon firebase"></i> Firebase</div>
+                        </div>
+                    </div>
+
+                    <!-- Category 6: Developer Tools -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-wrench"></i></div>
+                            <h3>Developer Tools</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fab fa-git-alt skill-icon git"></i> Git</div>
+                            <div class="skill-pill"><i class="fab fa-github"></i> GitHub</div>
+                            <div class="skill-pill"><i class="fas fa-code"></i> VS Code</div>
+                            <div class="skill-pill"><i class="fas fa-paper-plane"></i> Postman</div>
+                            <div class="skill-pill"><i class="fas fa-book-open"></i> Jupyter Notebook</div>
+                            <div class="skill-pill"><i class="fas fa-globe"></i> Netlify</div>
+                            <div class="skill-pill"><i class="fas fa-cloud-upload-alt"></i> Render</div>
+                        </div>
+                    </div>
+
+                    <!-- Category 7: Software Testing & Quality Assurance -->
+                    <div class="skill-category-card tilt-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-vial-circle-check"></i></div>
+                            <h3>Software Testing & QA</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <div class="skill-pill"><i class="fas fa-clipboard-check"></i> Manual Testing</div>
+                            <div class="skill-pill"><i class="fas fa-robot"></i> Automation Testing</div>
+                            <div class="skill-pill"><i class="fas fa-vial"></i> Selenium</div>
+                            <div class="skill-pill"><i class="fas fa-flask"></i> PyTest</div>
+                            <div class="skill-pill"><i class="fas fa-paper-plane"></i> API Testing (Postman)</div>
+                            <div class="skill-pill"><i class="fas fa-file-lines"></i> Test Case Design</div>
+                            <div class="skill-pill"><i class="fas fa-bug"></i> Defect / Bug Tracking</div>
+                            <div class="skill-pill"><i class="fas fa-tasks"></i> JIRA</div>
+                            <div class="skill-pill"><i class="fas fa-rotate"></i> Regression Testing</div>
+                            <div class="skill-pill"><i class="fas fa-shield-halved"></i> Unit & Integration Testing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Competency & Testing Telemetry (Check Point Style) -->
+                <div class="competency-telemetry-box tilt-card">
+                    <div class="telemetry-box-header">
+                        <div class="box-header-title">
+                            <i class="fas fa-terminal"></i>
+                            <span>SYSTEM_METRICS // CORE_COMPETENCIES_INDEX</span>
+                        </div>
+                        <div class="box-header-status">
+                            <span class="status-dot"></span> LIVE TELEMETRY
+                        </div>
+                    </div>
+                    <div class="telemetry-meters-grid">
+                        <div class="meter-item">
+                            <div class="meter-info">
+                                <span class="meter-name"><i class="fas fa-robot"></i> Generative AI & LLM Systems</span>
+                                <span class="meter-percent">95%</span>
+                            </div>
+                            <div class="meter-track">
+                                <div class="meter-fill" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="meter-item">
+                            <div class="meter-info">
+                                <span class="meter-name"><i class="fas fa-vial-circle-check"></i> QA & Automated Testing (PyTest/Selenium)</span>
+                                <span class="meter-percent">90%</span>
+                            </div>
+                            <div class="meter-track">
+                                <div class="meter-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="meter-item">
+                            <div class="meter-info">
+                                <span class="meter-name"><i class="fas fa-brain"></i> Machine Learning & Data Pipelines</span>
+                                <span class="meter-percent">88%</span>
+                            </div>
+                            <div class="meter-track">
+                                <div class="meter-fill" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                        <div class="meter-item">
+                            <div class="meter-info">
+                                <span class="meter-name"><i class="fas fa-code"></i> Full-Stack Engineering (React & Python)</span>
+                                <span class="meter-percent">92%</span>
+                            </div>
+                            <div class="meter-track">
+                                <div class="meter-fill" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Featured Portfolio Work</span>
+                    <h2 class="section-title">Innovative <span class="highlight">Projects</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Project Filter Tabs (Check Point Cyber Style) -->
+                <div class="tech-filter-tabs" id="project-filter-tabs">
+                    <button class="tech-tab active" data-filter="all"><i class="fas fa-layer-group"></i> ALL_REPOS [6]</button>
+                    <button class="tech-tab" data-filter="ai"><i class="fas fa-robot"></i> AI_&_RAG [2]</button>
+                    <button class="tech-tab" data-filter="ml"><i class="fas fa-brain"></i> ML_MODELS [2]</button>
+                    <button class="tech-tab" data-filter="web"><i class="fas fa-code"></i> FULLSTACK_&_QA [2]</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Featured Project 1: AI Resume Analyzer -->
+                    <div class="project-card tilt-card" data-category="ai">
+                        <div class="project-badge"><i class="fas fa-star"></i> Featured AI Project</div>
+                        <div class="project-image-wrapper">
+                            <img src="ai_resume_analyzer.jpg" alt="AI Resume Analyzer Preview" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Resume Analyzer & ATS Optimizer</h3>
+                            <p class="problem-statement">
+                                <strong><i class="fas fa-exclamation-triangle"></i> Problem Solved:</strong> Eliminates manual resume screening delays by automatically parsing candidate CVs, evaluating ATS match percentage against target job descriptions, and giving actionable skill gap recommendations.
+                            </p>
+                            
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> NLP-based resume text extraction and keyword frequency analysis.</li>
+                                <li><i class="fas fa-check"></i> Real-time match score calculation and interactive radar charts.</li>
+                                <li><i class="fas fa-check"></i> Automated feedback for missing technical skills and formatting advice.</li>
+                            </ul>
+
+                            <div class="project-stats">
+                                <div class="stat-badge"><i class="fas fa-chart-line"></i> 95%+ Parser Accuracy</div>
+                                <div class="stat-badge"><i class="fas fa-bolt"></i> Instant Feedback</div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">PyPDF2</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Divyaratann" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> GitHub Code
+                                </a>
+                                <a href="https://github.com/Divyaratann" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 2: AI PDF Chatbot (RAG System) -->
+                    <div class="project-card tilt-card" data-category="ai">
+                        <div class="project-badge"><i class="fas fa-star"></i> Featured AI Project</div>
+                        <div class="project-image-wrapper">
+                            <img src="ai_pdf_chatbot.jpg" alt="AI PDF Chatbot RAG System Preview" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI PDF Chatbot (RAG System)</h3>
+                            <p class="problem-statement">
+                                <strong><i class="fas fa-exclamation-triangle"></i> Problem Solved:</strong> Solves document overload by allowing users to converse naturally with large multi-page PDF documents, retrieving accurate context-backed answers in seconds without manual searching.
+                            </p>
+
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Retrieval-Augmented Generation (RAG) architecture using LangChain.</li>
+                                <li><i class="fas fa-check"></i> Vector embedding store for fast semantic document retrieval.</li>
+                                <li><i class="fas fa-check"></i> Contextual source citation and conversational memory.</li>
+                            </ul>
+
+                            <div class="project-stats">
+                                <div class="stat-badge"><i class="fas fa-clock"></i> &lt;1s Query Time</div>
+                                <div class="stat-badge"><i class="fas fa-quote-right"></i> Cited Sources</div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">Generative AI</span>
+                                <span class="tech-tag">Vector DB</span>
+                                <span class="tech-tag">LLM APIs</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Divyaratann" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> GitHub Code
+                                </a>
+                                <a href="https://github.com/Divyaratann" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Patient Performance Prediction -->
+                    <div class="project-card tilt-card" data-category="ml">
+                        <div class="project-badge"><i class="fas fa-brain"></i> ML Project</div>
+                        <div class="project-image-wrapper">
+                            <img src="MLpatient.png" alt="Patient Performance Prediction ML" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Patient Performance Prediction</h3>
+                            <p class="problem-statement">
+                                <strong><i class="fas fa-exclamation-triangle"></i> Problem Solved:</strong> Predicts patient health outcome trajectories and estimates risk metrics from historical clinical data to assist preliminary triage and health management.
+                            </p>
+
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Data preprocessing, feature engineering, and classification modeling.</li>
+                                <li><i class="fas fa-check"></i> Interactive risk score dashboard powered by Chart.js.</li>
+                                <li><i class="fas fa-check"></i> Evaluated model performance metrics (Accuracy, Precision, Recall).</li>
+                            </ul>
+
+                            <div class="project-stats">
+                                <div class="stat-badge"><i class="fas fa-heartbeat"></i> Health Risk Scoring</div>
+                                <div class="stat-badge"><i class="fas fa-chart-pie"></i> Visual Dashboard</div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5/CSS3</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Divyaratann/Patient-Performance-Prediction_ML" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> GitHub Code
+                                </a>
+                                <a href="https://patient-performance-prediction-ml.netlify.app/" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: AI Recommendation System -->
+                    <div class="project-card tilt-card" data-category="ml">
+                        <div class="project-badge"><i class="fas fa-sliders"></i> ML Project</div>
+                        <div class="project-image-wrapper">
+                            <img src="image.png" alt="AI Recommendation System" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Recommendation System</h3>
+                            <p class="problem-statement">
+                                <strong><i class="fas fa-exclamation-triangle"></i> Problem Solved:</strong> Tackles information overload by generating personalized recommendations using collaborative filtering algorithms and item similarity matrices.
+                            </p>
+
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Collaborative filtering and cosine similarity modeling.</li>
+                                <li><i class="fas fa-check"></i> User behavior profile analysis & data preprocessing.</li>
+                                <li><i class="fas fa-check"></i> Real-time top-N item recommendation retrieval.</li>
+                            </ul>
+
+                            <div class="project-stats">
+                                <div class="stat-badge"><i class="fas fa-filter"></i> Collaborative Filtering</div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-Learn</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Divyaratann" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> GitHub Code
+                                </a>
+                                <a href="https://github.com/Divyaratann" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Personal Portfolio Website -->
+                    <div class="project-card tilt-card" data-category="web">
+                        <div class="project-badge"><i class="fas fa-laptop-code"></i> Full Stack UI</div>
+                        <div class="project-image-wrapper">
+                            <img src="portfolio.png" alt="Personal Portfolio Website" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Portfolio Website</h3>
+                            <p class="problem-statement">
+                                <strong><i class="fas fa-exclamation-triangle"></i> Problem Solved:</strong> High-performance recruiter platform showcasing AI/ML projects, skills, certifications, and academic background with glassmorphism UI.
+                            </p>
+
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Glassmorphism styling & interactive particle backdrop.</li>
+                                <li><i class="fas fa-check"></i> Active scroll spy, typing effect & contact validation.</li>
+                            </ul>
+
+                            <div class="project-stats">
+                                <div class="stat-badge"><i class="fas fa-tachometer-alt"></i> 100 PageSpeed</div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript (ES6+)</span>
+                                <span class="tech-tag">EmailJS</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Divyaratann/Divyaratann_Portfolio" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> GitHub Code
+                                </a>
+                                <a href="https://divyaratann-portfolio.netlify.app" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Amazon Clone -->
+                    <div class="project-card tilt-card" data-category="web">
+                        <div class="project-badge"><i class="fas fa-shopping-cart"></i> Web App</div>
+                        <div class="project-image-wrapper">
+                            <img src="amazon.png" alt="Amazon Clone Web App" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Amazon E-Commerce Clone</h3>
+                            <p class="problem-statement">
+                                <strong><i class="fas fa-exclamation-triangle"></i> Problem Solved:</strong> Responsive e-commerce frontend replicating core user flows including hero promotion slider, product showcase grids, and shopping cart logic.
+                            </p>
+
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Full responsive e-commerce web layout.</li>
+                                <li><i class="fas fa-check"></i> Interactive shopping cart and UI components.</li>
+                            </ul>
+
+                            <div class="project-stats">
+                                <div class="stat-badge"><i class="fas fa-mobile-alt"></i> Mobile Optimized</div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Divyaratann/Amazon_Clone" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> GitHub Code
+                                </a>
+                                <a href="https://amazon-clone-div-341f34.netlify.app/" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section (NEW) -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Professional Background</span>
+                    <h2 class="section-title">Experience & <span class="highlight">Contributions</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="experience-timeline">
+                    <!-- Item 1: ML Internship -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-brain"></i></div>
+                        <div class="exp-timeline-content tilt-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Machine Learning Intern</h3>
+                                    <h4 class="exp-company"><i class="fas fa-building"></i> Future Interns</h4>
+                                </div>
+                                <span class="exp-duration"><i class="fas fa-calendar-alt"></i> Nov 2025</span>
+                            </div>
+
+                            <p class="exp-description">
+                                Received Certificate of Completion and Letter of Recommendation (LOR) for outstanding work in machine learning development.
+                            </p>
+
+                            <ul class="exp-bullet-list">
+                                <li><i class="fas fa-angle-right"></i> Engineered ML predictive models using Python, Scikit-learn, and Pandas.</li>
+                                <li><i class="fas fa-angle-right"></i> Implemented end-to-end data preprocessing pipelines, handling missing values and feature scaling.</li>
+                                <li><i class="fas fa-angle-right"></i> Evaluated model performance across classification metrics (Accuracy, Precision, F1-Score).</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Scikit-learn</span>
+                                <span>Pandas</span>
+                                <span>LOR Awarded</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Open Source & Projects -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fab fa-github"></i></div>
+                        <div class="exp-timeline-content tilt-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">AI & Open Source Developer</h3>
+                                    <h4 class="exp-company"><i class="fas fa-code-branch"></i> Independent & GitHub Contributions</h4>
+                                </div>
+                                <span class="exp-duration"><i class="fas fa-calendar-alt"></i> 2024 - Present</span>
+                            </div>
+
+                            <p class="exp-description">
+                                Actively building and sharing AI/ML software tools, web prototypes, and algorithms on GitHub.
+                            </p>
+
+                            <ul class="exp-bullet-list">
+                                <li><i class="fas fa-angle-right"></i> Developed CLI tools, recommendation engines, and NLP scripts in Python.</li>
+                                <li><i class="fas fa-angle-right"></i> Solved 200+ data structures and algorithmic challenges on LeetCode.</li>
+                                <li><i class="fas fa-angle-right"></i> Participated in national web workshops and tech summits (IIT Bombay Techfest).</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span>Open Source</span>
+                                <span>Python</span>
+                                <span>DSA</span>
+                                <span>Git & GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recruiter Callout Banner -->
+                <div class="recruiter-banner">
+                    <div class="recruiter-banner-icon"><i class="fas fa-user-check"></i></div>
+                    <div class="recruiter-banner-info">
+                        <h3>Currently Seeking AI/ML, QA / Software Testing & Developer Opportunities!</h3>
+                        <p>Available for 2025-2026 AI Engineer, Software Tester (QA - Manual/Automation), Machine Learning, or Full Stack Developer internships and entry-level roles.</p>
+                    </div>
+                    <div class="recruiter-banner-action">
+                        <a href="#contact" class="btn btn-primary btn-glow">
+                            <i class="fas fa-envelope"></i> Hire / Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Certifications & Milestones</span>
+                    <h2 class="section-title">Achievements & <span class="highlight">Certifications</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Achievement 1: Google GenAI -->
+                    <div class="achievement-card tilt-card">
+                        <div class="achievement-icon-wrapper">
+                            <i class="fab fa-google google-icon"></i>
+                        </div>
+                        <h3 class="achievement-title">Generative AI Certification</h3>
+                        <p class="achievement-issuer">Issued by Google</p>
+                        <p class="achievement-desc">Certified in Generative AI fundamentals, Large Language Models (LLMs), and prompt engineering principles.</p>
+                        <div class="achievement-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> Dec 2024</span>
+                            <span class="badge-tag">Verified</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2: IIT Bombay Workshop -->
+                    <div class="achievement-card tilt-card">
+                        <div class="achievement-icon-wrapper">
+                            <i class="fas fa-university iit-icon"></i>
+                        </div>
+                        <h3 class="achievement-title">Web Development Workshop</h3>
+                        <p class="achievement-issuer">Techfest, IIT Bombay</p>
+                        <p class="achievement-desc">Completed hands-on workshop on modern web development practices and responsive interface design.</p>
+                        <div class="achievement-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> Dec 2024</span>
+                            <span class="badge-tag">Workshop</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 3: Future Interns ML -->
+                    <div class="achievement-card tilt-card">
+                        <div class="achievement-icon-wrapper">
+                            <i class="fas fa-award ml-icon"></i>
+                        </div>
+                        <h3 class="achievement-title">ML Internship & LOR</h3>
+                        <p class="achievement-issuer">Future Interns</p>
+                        <p class="achievement-desc">Completed ML Internship with Letter of Recommendation for building machine learning models and predictive analysis.</p>
+                        <div class="achievement-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> Nov 2025</span>
+                            <span class="badge-tag">LOR Awarded</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 4: SPSS & Research -->
+                    <div class="achievement-card tilt-card">
+                        <div class="achievement-icon-wrapper">
+                            <i class="fas fa-chart-bar spss-icon"></i>
+                        </div>
+                        <h3 class="achievement-title">Research Methodology & Data Analysis</h3>
+                        <p class="achievement-issuer">National Workshop</p>
+                        <p class="achievement-desc">Certified in statistical analysis, data handling, and analytical methods using SPSS and Sigma Plot.</p>
+                        <div class="achievement-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> Oct 2024</span>
+                            <span class="badge-tag">Data Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 5: LeetCode & Coding -->
+                    <div class="achievement-card tilt-card">
+                        <div class="achievement-icon-wrapper">
+                            <i class="fas fa-code code-icon"></i>
+                        </div>
+                        <h3 class="achievement-title">LeetCode & Problem Solving</h3>
+                        <p class="achievement-issuer">LeetCode & HackerRank</p>
+                        <p class="achievement-desc">Active problem solver practicing Data Structures, Algorithms, Python, and SQL queries.</p>
+                        <div class="achievement-footer">
+                            <span class="badge-date"><i class="fas fa-fire"></i> Active Streak</span>
+                            <span class="badge-tag">Coding Profile</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 6: GitHub Open Source -->
+                    <div class="achievement-card tilt-card">
+                        <div class="achievement-icon-wrapper">
+                            <i class="fab fa-github github-icon"></i>
+                        </div>
+                        <h3 class="achievement-title">GitHub Open Source Creator</h3>
+                        <p class="achievement-issuer">GitHub Community</p>
+                        <p class="achievement-desc">Maintains multiple public repositories covering AI applications, ML prediction engines, and web applications.</p>
+                        <div class="achievement-footer">
+                            <span class="badge-date"><i class="fas fa-star"></i> Repositories</span>
+                            <span class="badge-tag">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Academic Credentials</span>
+                    <h2 class="section-title">Education & <span class="highlight">Coursework</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="education-timeline">
+                    <!-- Degree 1: B.Tech CSE -->
+                    <div class="edu-card tilt-card">
+                        <div class="edu-badge"><i class="fas fa-graduation-cap"></i> Undergrad</div>
+                        <div class="edu-header">
+                            <div>
+                                <h3>Bachelor of Technology (B.Tech) – Computer Science Engineering</h3>
+                                <p class="edu-institution"><i class="fas fa-university"></i> Sam Higginbottom University of Agriculture, Technology and Sciences (SHUATS)</p>
+                                <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Prayagraj, Uttar Pradesh, India</p>
+                            </div>
+                            <div class="edu-duration">
+                                <span class="duration-pill"><i class="fas fa-calendar"></i> July 2023 - Present (2027)</span>
+                            </div>
+                        </div>
+
+                        <p class="edu-description">
+                            Specializing in Artificial Intelligence, Machine Learning, and Full Stack Development. Active member of technical coding clubs and workshops.
+                        </p>
+
+                        <div class="relevant-coursework">
+                            <h4><i class="fas fa-book"></i> Relevant Coursework:</h4>
+                            <div class="course-pills">
+                                <span class="course-pill"><i class="fas fa-robot"></i> Machine Learning</span>
+                                <span class="course-pill"><i class="fas fa-brain"></i> Artificial Intelligence</span>
+                                <span class="course-pill"><i class="fas fa-database"></i> Database Management Systems (DBMS)</span>
+                                <span class="course-pill"><i class="fas fa-microchip"></i> Operating Systems (OS)</span>
+                                <span class="course-pill"><i class="fas fa-network-wired"></i> Computer Networks (CN)</span>
+                                <span class="course-pill"><i class="fas fa-code"></i> Data Structures & Algorithms (DSA)</span>
+                                <span class="course-pill"><i class="fas fa-cogs"></i> Software Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Degree 2: 12th Grade -->
+                    <div class="edu-card tilt-card">
+                        <div class="edu-badge"><i class="fas fa-school"></i> High School</div>
+                        <div class="edu-header">
+                            <div>
+                                <h3>Higher Secondary Education (12th Grade)</h3>
+                                <p class="edu-institution"><i class="fas fa-school"></i> RPM Academy | CBSE Board</p>
+                            </div>
+                            <div class="edu-duration">
+                                <span class="duration-pill"><i class="fas fa-calendar"></i> Completed Feb 2023</span>
+                                <span class="score-pill"><i class="fas fa-star"></i> Score: 84%</span>
+                            </div>
+                        </div>
+                        <p class="edu-description">Studied Physics, Chemistry, Mathematics, and Computer Science.</p>
+                    </div>
+
+                    <!-- Degree 3: 10th Grade -->
+                    <div class="edu-card tilt-card">
+                        <div class="edu-badge"><i class="fas fa-book-open"></i> Secondary</div>
+                        <div class="edu-header">
+                            <div>
+                                <h3>Secondary Education (10th Grade)</h3>
+                                <p class="edu-institution"><i class="fas fa-school"></i> RPM Academy | CBSE Board</p>
+                            </div>
+                            <div class="edu-duration">
+                                <span class="duration-pill"><i class="fas fa-calendar"></i> Completed Feb 2020 / 2023</span>
+                                <span class="score-pill"><i class="fas fa-star"></i> Score: 89%</span>
+                            </div>
+                        </div>
+                        <p class="edu-description">Completed secondary school education with academic excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Let's Connect</span>
+                    <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Details Sidebar -->
+                    <div class="contact-info-wrapper">
+                        <div class="contact-card tilt-card">
+                            <h3>Let's Build Something Intelligent!</h3>
+                            <p class="contact-intro">
+                                Whether you have a job opportunity, an internship offer, or an exciting AI project to collaborate on, feel free to reach out directly.
+                            </p>
+
+                            <div class="contact-list">
+                                <div class="contact-item">
+                                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <p><a href="mailto:divyaratann2703@gmail.com">divyaratann2703@gmail.com</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                    <div>
+                                        <h4>Phone / WhatsApp</h4>
+                                        <p><a href="tel:+919792085957">+91 9792085957</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div>
+                                        <h4>Location</h4>
+                                        <p>15B Gangotri Nagar, Prayagraj, Uttar Pradesh, India</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="socials-heading">Coding & Social Profiles:</h4>
+                            <div class="contact-social-pills">
+                                <a href="https://github.com/Divyaratann" target="_blank" class="contact-social-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/" target="_blank" class="contact-social-btn">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://leetcode.com/u/Divyaratann/" target="_blank" class="contact-social-btn">
+                                    <i class="fas fa-code"></i> LeetCode
+                                </a>
+                                <a href="RESUMEDivyaratann.pdf" target="_blank" download="Divyaratann_Srivastava_Resume.pdf" class="contact-social-btn accent">
+                                    <i class="fas fa-file-pdf"></i> Resume
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" class="contact-form tilt-card" novalidate>
+                            <h3><i class="fas fa-paper-plane"></i> Send Me a Message</h3>
+                            
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Your Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                <span class="error-msg" id="name-error">Please enter your name</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Your Email *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject"><i class="fas fa-tag"></i> Subject *</label>
+                                <input type="text" id="subject" name="subject" placeholder="AI / ML Opportunity" required>
+                                <span class="error-msg" id="subject-error">Please enter a subject</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment"></i> Your Message *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Hi Divyaratann, I came across your portfolio..." required></textarea>
+                                <span class="error-msg" id="message-error">Please write a message</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-glow w-100" id="submit-btn">
+                                <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Divyaratann Srivastava. All rights reserved.</p>
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">Divyaratann<span class="logo-dot">.ai</span></a>
+                    <p>AI Engineer | Machine Learning Engineer | Generative AI Developer</p>
                 </div>
-                <div class="footer-social">
-                    <a href="https://github.com/Divyaratann" target="_blank" class="footer-social-link">
+
+                <div class="footer-socials">
+                    <a href="https://github.com/Divyaratann" target="_blank" class="footer-social-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/" target="_blank" class="footer-social-link">
+                    <a href="https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/" target="_blank" class="footer-social-link" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:divyratan2703@gmail.com" class="footer-social-link">
+                    <a href="https://leetcode.com/u/Divyaratann/" target="_blank" class="footer-social-link" title="LeetCode">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="mailto:divyaratann2703@gmail.com" class="footer-social-link" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Divyaratann Srivastava. All Rights Reserved.</p>
+                <a href="#home" class="back-to-top" id="back-to-top" title="Back to top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Quick Visitor Connect Floating Widget -->
+    <div class="visitor-connect-floating" id="visitor-connect-widget">
+        <button class="connect-toggle-btn" id="connect-toggle-btn" aria-label="Get Instant Resume on Email">
+            <span class="connect-badge-pulse"></span>
+            <i class="fas fa-paper-plane"></i>
+            <span class="connect-btn-text">Get Instant Resume</span>
+        </button>
+        <div class="connect-card" id="connect-card">
+            <div class="connect-card-header">
+                <div class="connect-card-title">
+                    <i class="fas fa-bolt"></i> Instant Resume & Direct Connect
+                </div>
+                <button class="connect-close-btn" id="connect-close-btn" aria-label="Close widget">&times;</button>
+            </div>
+            <div class="connect-card-body">
+                <p class="connect-desc">Enter your email below to instantly receive my verified Resume PDF, GitHub repos, and profile overview in your inbox.</p>
+                <form id="visitor-quick-form" class="connect-form">
+                    <div class="connect-input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="visitor-quick-email" placeholder="Enter your email address..." required>
+                    </div>
+                    <div class="connect-input-group">
+                        <i class="fas fa-building"></i>
+                        <input type="text" id="visitor-quick-org" placeholder="Company / Role (Optional)">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block connect-submit-btn" id="visitor-submit-btn">
+                        <span>Send Me Resume & Links</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                <div class="connect-footnote">
+                    <i class="fas fa-shield-alt"></i> 100% spam-free. Instant delivery.
+                </div>
+                <div id="connect-status-msg" class="connect-status-msg"></div>
+            </div>
+        </div>
+    </div>
 
-<script>
-    emailjs.init("a6l1Ph8gIdj4gEAz0");
-</script>
-
-<script src="script.js"></script>
+    <!-- Main JavaScript with Cache Buster -->
+    <script src="script.js?v=20261026_sv"></script>
 </body>
 </html>
