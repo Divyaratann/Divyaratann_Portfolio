@@ -12,22 +12,38 @@
     <meta name="author" content="Divyaratann Srivastava">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Google Search Snippet Thumbnail & Rich Media -->
+    <meta name="thumbnail" content="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+    <link rel="image_src" href="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+
+    <!-- Open Graph / Facebook / WhatsApp (Rich Photo Previews) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://divyaratann-portfolio.netlify.app/">
+    <meta property="og:site_name" content="Divyaratann Srivastava Portfolio">
     <meta property="og:title" content="Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer">
-    <meta property="og:description" content="Explore AI projects, Software Testing & QA, LLM applications, and Full Stack development work by Divyaratann Srivastava.">
-    <meta property="og:image" content="portfolio.png">
+    <meta property="og:description" content="Computer Science undergraduate specializing in AI engineering, Software Testing (QA), LLM APIs, Python, React, and Full Stack development.">
+    <meta property="og:image" content="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+    <meta property="og:image:secure_url" content="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="Divyaratann Srivastava - AI Engineer & QA Developer">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://divyaratann-portfolio.netlify.app/">
-    <meta property="twitter:title" content="Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer">
-    <meta property="twitter:description" content="Explore AI projects, Software Testing & QA, LLM applications, and Full Stack development work by Divyaratann Srivastava.">
-    <meta property="twitter:image" content="portfolio.png">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://divyaratann-portfolio.netlify.app/">
+    <meta name="twitter:title" content="Divyaratann Srivastava | AI Engineer & Software Tester / QA Developer">
+    <meta name="twitter:description" content="Computer Science undergraduate specializing in AI engineering, Software Testing (QA), LLM APIs, Python, React, and Full Stack development.">
+    <meta name="twitter:image" content="https://divyaratann-portfolio.netlify.app/profile-og.jpg">
+    <meta name="twitter:image:alt" content="Divyaratann Srivastava">
 
-    <!-- Favicon (Custom Divyaratann AI Monogram SVG) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='28' fill='%230b0d14'/%3E%3Crect x='3' y='3' width='94' height='94' rx='25' fill='none' stroke='url(%23g)' stroke-width='4' opacity='0.75'/%3E%3Ctext x='48%25' y='71%25' font-family='system-ui, -apple-system, sans-serif' font-size='56' font-weight='900' fill='url(%23g)' text-anchor='middle'%3ED%3C/text%3E%3Ccircle cx='76' cy='32' r='7' fill='%2338bdf8'/%3E%3C/svg%3E">
+    <!-- Google Search Favicons (Standard Crawlable Sizes for Search Snippets) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Anti-Cache Headers -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -363,32 +379,56 @@
     <!-- Main CSS with Cache Buster -->
     <link rel="stylesheet" href="styles.css?v=20261027_roles">
 
-    <!-- Schema.org JSON-LD Structured Data for Recruiter Search -->
+    <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets & Recruiter Search -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Divyaratann Srivastava",
-      "url": "https://divyaratann-portfolio.netlify.app",
-      "image": "profile.jpg",
-      "jobTitle": "AI Engineer | Software Tester / QA | AI Full Stack Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sam Higginbottom University of Agriculture, Technology and Sciences (SHUATS)"
-      },
-      "sameAs": [
-        "https://github.com/Divyaratann",
-        "https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/",
-        "https://leetcode.com/u/Divyaratann/"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Prayagraj",
-        "addressRegion": "Uttar Pradesh",
-        "addressCountry": "India"
-      },
-      "alumniOf": "RPM Academy",
-      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Testing", "Quality Assurance", "Manual Testing", "Automation Testing", "Generative AI", "LLM APIs", "Python", "JavaScript", "React", "Full Stack Development"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://divyaratann-portfolio.netlify.app/#person",
+          "name": "Divyaratann Srivastava",
+          "url": "https://divyaratann-portfolio.netlify.app",
+          "image": {
+            "@type": "ImageObject",
+            "@id": "https://divyaratann-portfolio.netlify.app/#profile-image",
+            "url": "https://divyaratann-portfolio.netlify.app/profile-og.jpg",
+            "contentUrl": "https://divyaratann-portfolio.netlify.app/profile-og.jpg",
+            "caption": "Divyaratann Srivastava - AI Engineer & Software QA Developer"
+          },
+          "jobTitle": "AI Engineer & Software Testing (QA) Developer",
+          "description": "Portfolio of Divyaratann Srivastava - Computer Science Engineer specializing in AI/ML, Software Testing/QA, and Full Stack development.",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sam Higginbottom University of Agriculture, Technology and Sciences (SHUATS)"
+          },
+          "sameAs": [
+            "https://github.com/Divyaratann",
+            "https://www.linkedin.com/in/divyaratann-srivastava-08a8a52a3/",
+            "https://leetcode.com/u/Divyaratann/"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Prayagraj",
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "India"
+          },
+          "alumniOf": "RPM Academy",
+          "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Testing", "Quality Assurance", "Manual Testing", "Automation Testing", "Generative AI", "LLM APIs", "Python", "JavaScript", "React", "Full Stack Development"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://divyaratann-portfolio.netlify.app/#website",
+          "url": "https://divyaratann-portfolio.netlify.app",
+          "name": "Divyaratann Srivastava Portfolio",
+          "publisher": {
+            "@id": "https://divyaratann-portfolio.netlify.app/#person"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://divyaratann-portfolio.netlify.app/#profile-image"
+          }
+        }
+      ]
     }
     </script>
 

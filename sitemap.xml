@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://divyaratann-portfolio.netlify.app/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://divyaratann-portfolio.netlify.app/profile-og.jpg</image:loc>
+      <image:title>Divyaratann Srivastava</image:title>
+      <image:caption>Divyaratann Srivastava - AI Engineer &amp; Software Testing QA Developer</image:caption>
+    </image:image>
   </url>
 </urlset>
